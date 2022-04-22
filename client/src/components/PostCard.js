@@ -11,7 +11,7 @@ export function PostCard({ post }) {
       (t) => (
         <div>
           <p className="text-white">
-            Do you want to delete <strong>{id}</strong>?
+            ¿Quieres eliminar <strong>{id}</strong>?
           </p>
           <div>
             <button
@@ -21,13 +21,13 @@ export function PostCard({ post }) {
                 toast.dismiss(t.id);
               }}
             >
-              Delete
+              Eliminar
             </button>
             <button
               className="bg-slate-400 hover:bg-slate-500 px-3 py-2 text-white rounded-sm mx-2"
               onClick={() => toast.dismiss(t.id)}
             >
-              Cancel
+              Cancelar
             </button>
           </div>
         </div>

@@ -29,17 +29,17 @@ export function PostForm() {
     <div className="flex items-center justify-center">
       <div className="bg-zinc-800 p-10 shadow-md shadow-black">
         <header className="flex justify-between items-center py-4 text-white">
-          <h3 className="text-xl">New Post</h3>
+          <h3 className="text-xl">Nuevo Post</h3>
           <Link to="/" className="text-gray-400 text-sm hover:text-gray-300">
-            Go Back
+            Regresar
           </Link>
         </header>
         <Formik
           initialValues={post}
           enableReinitialize
           validationSchema={Yup.object({
-            title: Yup.string().required("Title is Required"),
-            description: Yup.string().required("Description is Required"),
+            title: Yup.string().required("Titulo requerido"),
+            description: Yup.string().required("Descripción requerida"),
             // image: Yup.mixed().required("The image required"),
           })}
           onSubmit={async (values, actions) => {
@@ -59,11 +59,11 @@ export function PostForm() {
                 htmlFor="title"
                 className="text-sm block font-bold mb-2 text-gray-400"
               >
-                Title
+                Titulo
               </label>
               <Field
                 className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full"
-                placeholder="Post title"
+                placeholder="Escribe un titulo"
                 name="title"
                 // autoFocus
               />
@@ -77,13 +77,13 @@ export function PostForm() {
                 htmlFor="description"
                 className="text-sm block font-bold mb-2 text-gray-400"
               >
-                Description
+                Descripción
               </label>
               <Field
                 component="textarea"
                 name="description"
                 id="description"
-                placeholder="Write a description"
+                placeholder="Escribe una descripción"
                 rows="3"
                 className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full"
               />
@@ -97,7 +97,7 @@ export function PostForm() {
                 htmlFor="image"
                 className="text-sm block font-bold mb-2 text-gray-400"
               >
-                Image
+                Imagen
               </label>
               <input
                 type="file"
@@ -119,7 +119,7 @@ export function PostForm() {
                 {isSubmitting ? (
                   <AiOutlineLoading3Quarters className="animate-spin h-5 w-5" />
                 ) : (
-                  "save"
+                  "Enviar"
                 )}
               </button>
             </Form>
