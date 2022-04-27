@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "dev": "nodemon server --watch server",
-    "build:frontend": "npm run build --prefix client",
+    "build": "npm run build --prefix client",
     "start": "node server"
   },
   "keywords": [],

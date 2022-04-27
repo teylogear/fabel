@@ -42,6 +42,3 @@ export function HomePage() {
     </main>
   );
 }
-
-
-//probando vercel
